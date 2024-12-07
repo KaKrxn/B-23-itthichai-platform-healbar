@@ -11,7 +11,7 @@ public class Rock : Weapon
     public override void Move()
     {
         rb2d.AddForce(force);
-       // Debug.Log("Rock move with Rigidbody:force");
+       
     }
 
     public override void OnHitWith(Character character)
@@ -20,7 +20,7 @@ public class Rock : Weapon
         {
             character.TakeDamage(this.Damage);
         }
-        //Console.WriteLine($"{this.name}: Overriding OnHitWith(Character) ");
+       
     }
 
     public void Start()

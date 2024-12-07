@@ -16,10 +16,7 @@ public class Banana : Weapon
         Debug.Log("Banana moves with constant speed using Transform");
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
+    
 
     public override void OnHitWith(Character character)
     {
@@ -34,6 +31,10 @@ public class Banana : Weapon
     {
         Damage = 30;
         Speed = 4.0f * GetShootDirection();
+        Move();
+    }
+    private void FixedUpdate()
+    {
         Move();
     }
 }
